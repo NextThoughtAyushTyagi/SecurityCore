@@ -35,9 +35,12 @@ public class StudentService {
     }
 
     public int update(StudentCommand studentCommand) {
-        Student student = new Student(studentCommand);
-        getSession().update(student);
-        getSession().close();
+        Session session = getSession();
+        Student student = (Student) session.get(Student.class, studentCommand.getId());
+        student = student.updateStudent(student, studentCommand);
+        session.update(student);
+        session.flush();
+        session.close();
         return student.getId();
     }
 
@@ -54,13 +57,17 @@ public class StudentService {
     }
 
     public Student read(Integer id) {
-        Student student = (Student) getSession().get(Student.class, id);
+        Session session = getSession();
+        Student student = (Student) session.get(Student.class, id);
+        session.close();
         return student;
     }
 
-    public void delete(StudentCommand studentCommand) {
-        Student student = new Student(studentCommand.getId());
-        getSession().delete(student);
-        getSession().close();
+    public void delete(int id) {
+        Session session = getSession();
+        Student student = (Student) getSession().get(Student.class, id);
+        session.delete(student);
+        session.flush();
+        session.close();
     }
 }

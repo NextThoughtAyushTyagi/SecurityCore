@@ -23,11 +23,11 @@ public class WelcomeService {
     }
 
     public String getTitle() {
-        return "Title from welcome service";
+        return "Spring MVC 4.3.4 + gradle 3.2.1 + Hibernate 4.3.6";
     }
 
     public String getMessage() {
-        return "Message from welcome service";
+        return "My SQL Connector 5.1.29";
     }
 
 

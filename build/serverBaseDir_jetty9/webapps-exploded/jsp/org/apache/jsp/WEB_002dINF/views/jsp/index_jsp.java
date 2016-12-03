@@ -11,10 +11,20 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_s_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_s_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -45,18 +55,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("    <title>Spring MVC + Gradle + Hibernate</title>\n");
+      out.write("    <link rel=\"stylesheet\"\n");
+      out.write("          type=\"text/css\"\n");
+      out.write("          href=\"");
+      if (_jspx_meth_s_url_0(_jspx_page_context))
+        return;
+      out.write("\">\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("<h1>Spring MVC + Gradle + Hibernate</h1>\n");
-      out.write("<h4>");
+      out.write("<h1 class=\"text-center\">Spring MVC + Gradle + Hibernate</h1>\n");
+      out.write("<h3 class=\"text-center\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${title}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h4>\n");
-      out.write("<h6>");
+      out.write("</h3>\n");
+      out.write("<h4 class=\"text-center\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h6>\n");
+      out.write("</h4>\n");
       out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
@@ -71,5 +88,31 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_s_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  s:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_s_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_s_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_s_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_s_url_0.setParent(null);
+    _jspx_th_s_url_0.setValue("/resources/bootstrap.min.css");
+    int[] _jspx_push_body_count_s_url_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_s_url_0 = _jspx_th_s_url_0.doStartTag();
+      if (_jspx_th_s_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_s_url_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_s_url_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_s_url_0.doFinally();
+      _jspx_tagPool_s_url_value_nobody.reuse(_jspx_th_s_url_0);
+    }
+    return false;
   }
 }

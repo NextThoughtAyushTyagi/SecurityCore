@@ -24,9 +24,6 @@ public class WelcomeController {
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public ModelAndView index() {
         logger.info("Index executed");
-        Student student = new Student("Ashish");
-        welcomeService.saveOrUpdateStudent(student);
-        logger.info("StudentCommand saved");
         ModelAndView model = new ModelAndView();
         model.setViewName("index");
         model.addObject("title", welcomeService.getTitle());

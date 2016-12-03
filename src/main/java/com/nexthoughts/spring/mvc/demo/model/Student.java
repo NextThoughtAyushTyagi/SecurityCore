@@ -12,7 +12,6 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String name;
 
     private String firstName;
 
@@ -87,15 +86,17 @@ public class Student {
         return result;
     }
 
-
-    public Student(String name) {
-        this.name = name;
-    }
-
     public Student(StudentCommand studentCommand) {
         this.firstName = studentCommand.getFirstName();
         this.lastName = studentCommand.getLastName();
         this.emailAddress = studentCommand.getEmailAddress();
     }
 
+    public Student updateStudent(Student student, StudentCommand studentCommand) {
+        student.id = studentCommand.getId();
+        student.emailAddress = studentCommand.getEmailAddress();
+        student.firstName = studentCommand.getFirstName();
+        student.lastName = studentCommand.getLastName();
+        return student;
+    }
 }

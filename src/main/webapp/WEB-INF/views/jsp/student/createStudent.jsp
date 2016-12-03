@@ -25,32 +25,47 @@
     </div>
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
-            <h3 class="text-center"> <s:message code="create.studentCommand"/> </h3>
-            <sf:form method="post" commandName="studentCommand">
+            <h3 class="text-center"><s:message code="create.studentCommand"/></h3>
+            <form method="post" class="form-horizontal">
                 <div class="col-lg-6 col-lg-offset-3">
                     <fieldset>
-                        <label class="text-left" for="firstName">First Name</label>
-                        <sf:input cssClass="pull-right" path="firstName" placeholder="Enter first Name"/>
-                        <sf:errors path="firstName" cssClass="error"/><br>
+                        <label class="text-left control-label" for="firstName">First Name</label>
+                        <input class="pull-right form-control input-md" name="firstName" id="firstName"
+                               placeholder="Enter first Name"/>
+                        <errors name="firstName" class="error"/>
+                        <br>
                     </fieldset>
 
                     <fieldset>
-                        <label class="text-left" for="lastName">Last Name</label>
-                        <sf:input cssClass="pull-right" path="lastName" placeholder="Enter last Name"/>
-                        <sf:errors path="lastName" cssClass="error"/><br>
+                        <label class="text-left control-label" for="lastName">Last Name</label>
+                        <input class="pull-right form-control input-md" name="lastName" id="lastName"
+                               placeholder="Enter last Name"/>
+                        <errors name="lastName" class="error"/>
+                        <br>
                     </fieldset>
 
                     <fieldset>
-                        <label class="text-left" for="emailAddress">Email Address</label>
-                        <sf:input cssClass="pull-right" path="emailAddress" placeholder="Enter email address"/>
-                        <sf:errors path="emailAddress" cssClass="error"/><br>
+                        <label class="text-left control-label" for="emailAddress">Email Address</label>
+                        <input class="pull-right form-control input-md" name="emailAddress" id="emailAddress"
+                               placeholder="Enter email address"/>
+                        <errors name="emailAddress" class="error"/>
+                        <br>
                     </fieldset>
                     <fieldset>
-                        <input type="submit" value="Create" class="btn btn-success text-center">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-3">
+                                <div class="pull-left">
+                                    <input type="submit" value="Create" class="btn btn-success ">
+                                </div>
+                                <div class="pull-right">
+                                    &nbsp;<a class="btn btn-info" href="<s:url value="/student/list"/>">Back</a>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
-
-            </sf:form>
+            </form>
         </div>
     </div>
 </div>

@@ -19,9 +19,25 @@
     </div>
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
-            <c:forEach var="studentCommand" items="${studentCommandList}">
-                ${studentCommand.id} &nbsp; ${studentCommand.firstName}
-            </c:forEach>
+            <table class="table table-responsive">
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Action</th>
+                </tr>
+                <c:forEach var="student" items="${studentCommandList}" varStatus="i">
+                    <tr>
+                        <td>${i}</td>
+                        <td>${student.getFirstName()}</td>
+                        <td>${student.getLastName()}</td>
+                        <td>${student.getEmailAddress()}</td>
+                        <td>${"Edit,Delete"}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 package com.nexthoughts.spring.mvc.demo.web.controller;
 
 import com.nexthoughts.spring.mvc.demo.classes.StudentCommand;
+import com.nexthoughts.spring.mvc.demo.model.Student;
 import com.nexthoughts.spring.mvc.demo.services.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,12 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/student")
@@ -28,49 +27,70 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @RequestMapping(value = "/allStudents", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ModelAndView allStudents() {
-        List<StudentCommand> studentCommandList = new ArrayList<>();
-        StudentCommand studentCommand = null;
-        for (int counter = 0; counter < 20; counter++) {
-            studentCommand = new StudentCommand(counter, "Demo StudentCommand " + counter);
-            studentCommandList.add(studentCommand);
+        List<StudentCommand> studentList = studentService.list();
+        for (StudentCommand studentCommand : studentList) {
+            System.out.println(studentCommand.getId());
         }
-        for (StudentCommand studentCommand1 :
-                studentCommandList) {
-            System.out.println(studentCommand1.getId());
-            System.out.println(studentCommand.getFirstName());
-        }
-        Map<String, List<StudentCommand>> model = new LinkedHashMap<>();
-        model.put("studentCommandList", studentCommandList);
-        ModelAndView modelAndView = new ModelAndView("studentCommand/allStudents", model);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("student/list");
+        modelAndView.addObject("studentList", studentList);
         return modelAndView;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView createStudentForm() {
-        logger.info("Executing GET method for /studentCommand/create");
+        logger.info("Executing GET method for /student/create");
         logger.info("==========================================");
-        StudentCommand studentCommand = new StudentCommand();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("studentCommand/create");
-        modelAndView.addObject("studentCommand", studentCommand);
+        modelAndView.setViewName("student/createStudent");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    public ModelAndView createStudentEditForm(@RequestParam int id) {
+        logger.info("Executing GET method for /student/edit");
+        logger.info("==========================================");
+        Student student = studentService.read(id);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("student/editStudent");
+        modelAndView.addObject("student", student);
+        return modelAndView;
+    }
+
+
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public ModelAndView updateStudent(StudentCommand studentCommand) {
+        logger.info("Executing POST method for /student/edit");
+        logger.info("==========================================");
+        studentService.update(studentCommand);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("redirect:list");
         return modelAndView;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView saveStudent(StudentCommand studentCommand) {
-        logger.info("Executing POST method for /studentCommand/create");
+        logger.info("Executing POST method for /student/create");
         logger.info("==========================================");
-        logger.info(studentCommand.getFirstName());
-        logger.info(studentCommand.getLastName());
-        logger.info(studentCommand.getEmailAddress());
         int studentId = studentService.create(studentCommand);
-        logger.info("================StudentCommand Saved with Id - " + studentId + " ==========================");
+        logger.info("================Student Saved with Id - " + studentId + " ==========================");
         logger.info("==========================================");
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("studentCommand/create");
+        modelAndView.setViewName("redirect:list");
         modelAndView.addObject("studentCommand", studentCommand);
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public ModelAndView deleteStudent(@RequestParam int id) {
+        System.out.println("===============ID to delete====================");
+        System.out.println(id);
+        System.out.println("===================================");
+        studentService.delete(id);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("redirect:list");
         return modelAndView;
     }
 }

@@ -11,11 +11,8 @@ public final class createStudent_jsp extends org.apache.jasper.runtime.HttpJspBa
 
   private static java.util.List<String> _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sf_form_method_commandName;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_s_message_code_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sf_errors_path_cssClass_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -24,19 +21,13 @@ public final class createStudent_jsp extends org.apache.jasper.runtime.HttpJspBa
   }
 
   public void _jspInit() {
-    _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sf_form_method_commandName = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_s_message_code_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sf_errors_path_cssClass_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.release();
-    _jspx_tagPool_sf_form_method_commandName.release();
     _jspx_tagPool_s_url_value_nobody.release();
     _jspx_tagPool_s_message_code_nobody.release();
-    _jspx_tagPool_sf_errors_path_cssClass_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -93,136 +84,53 @@ public final class createStudent_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    </div>\n");
       out.write("    <div class=\"row\">\n");
       out.write("        <div class=\"col-lg-6 col-lg-offset-3\">\n");
-      out.write("            <h3 class=\"text-center\"> ");
+      out.write("            <h3 class=\"text-center\">");
       if (_jspx_meth_s_message_0(_jspx_page_context))
         return;
-      out.write(" </h3>\n");
-      out.write("            ");
-      //  sf:form
-      org.springframework.web.servlet.tags.form.FormTag _jspx_th_sf_form_0 = (org.springframework.web.servlet.tags.form.FormTag) _jspx_tagPool_sf_form_method_commandName.get(org.springframework.web.servlet.tags.form.FormTag.class);
-      _jspx_th_sf_form_0.setPageContext(_jspx_page_context);
-      _jspx_th_sf_form_0.setParent(null);
-      _jspx_th_sf_form_0.setMethod("post");
-      _jspx_th_sf_form_0.setCommandName("student");
-      int[] _jspx_push_body_count_sf_form_0 = new int[] { 0 };
-      try {
-        int _jspx_eval_sf_form_0 = _jspx_th_sf_form_0.doStartTag();
-        if (_jspx_eval_sf_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-          do {
-            out.write("\n");
-            out.write("                <div class=\"col-lg-6 col-lg-offset-3\">\n");
-            out.write("                    <fieldset>\n");
-            out.write("                        <label class=\"text-left\" for=\"firstName\">First Name</label>\n");
-            out.write("                        ");
-            if (_jspx_meth_sf_input_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_sf_form_0, _jspx_page_context, _jspx_push_body_count_sf_form_0))
-              return;
-            out.write("\n");
-            out.write("                        ");
-            //  sf:errors
-            org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_sf_errors_0 = (org.springframework.web.servlet.tags.form.ErrorsTag) _jspx_tagPool_sf_errors_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
-            _jspx_th_sf_errors_0.setPageContext(_jspx_page_context);
-            _jspx_th_sf_errors_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-            _jspx_th_sf_errors_0.setPath("firstName");
-            _jspx_th_sf_errors_0.setCssClass("error");
-            int[] _jspx_push_body_count_sf_errors_0 = new int[] { 0 };
-            try {
-              int _jspx_eval_sf_errors_0 = _jspx_th_sf_errors_0.doStartTag();
-              if (_jspx_th_sf_errors_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-                return;
-              }
-            } catch (Throwable _jspx_exception) {
-              while (_jspx_push_body_count_sf_errors_0[0]-- > 0)
-                out = _jspx_page_context.popBody();
-              _jspx_th_sf_errors_0.doCatch(_jspx_exception);
-            } finally {
-              _jspx_th_sf_errors_0.doFinally();
-              _jspx_tagPool_sf_errors_path_cssClass_nobody.reuse(_jspx_th_sf_errors_0);
-            }
-            out.write("<br>\n");
-            out.write("                    </fieldset>\n");
-            out.write("\n");
-            out.write("                    <fieldset>\n");
-            out.write("                        <label class=\"text-left\" for=\"lastName\">Last Name</label>\n");
-            out.write("                        ");
-            if (_jspx_meth_sf_input_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_sf_form_0, _jspx_page_context, _jspx_push_body_count_sf_form_0))
-              return;
-            out.write("\n");
-            out.write("                        ");
-            //  sf:errors
-            org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_sf_errors_1 = (org.springframework.web.servlet.tags.form.ErrorsTag) _jspx_tagPool_sf_errors_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
-            _jspx_th_sf_errors_1.setPageContext(_jspx_page_context);
-            _jspx_th_sf_errors_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-            _jspx_th_sf_errors_1.setPath("lastName");
-            _jspx_th_sf_errors_1.setCssClass("error");
-            int[] _jspx_push_body_count_sf_errors_1 = new int[] { 0 };
-            try {
-              int _jspx_eval_sf_errors_1 = _jspx_th_sf_errors_1.doStartTag();
-              if (_jspx_th_sf_errors_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-                return;
-              }
-            } catch (Throwable _jspx_exception) {
-              while (_jspx_push_body_count_sf_errors_1[0]-- > 0)
-                out = _jspx_page_context.popBody();
-              _jspx_th_sf_errors_1.doCatch(_jspx_exception);
-            } finally {
-              _jspx_th_sf_errors_1.doFinally();
-              _jspx_tagPool_sf_errors_path_cssClass_nobody.reuse(_jspx_th_sf_errors_1);
-            }
-            out.write("<br>\n");
-            out.write("                    </fieldset>\n");
-            out.write("\n");
-            out.write("                    <fieldset>\n");
-            out.write("                        <label class=\"text-left\" for=\"emailAddress\">Email Address</label>\n");
-            out.write("                        ");
-            if (_jspx_meth_sf_input_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_sf_form_0, _jspx_page_context, _jspx_push_body_count_sf_form_0))
-              return;
-            out.write("\n");
-            out.write("                        ");
-            //  sf:errors
-            org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_sf_errors_2 = (org.springframework.web.servlet.tags.form.ErrorsTag) _jspx_tagPool_sf_errors_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
-            _jspx_th_sf_errors_2.setPageContext(_jspx_page_context);
-            _jspx_th_sf_errors_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-            _jspx_th_sf_errors_2.setPath("emailAddress");
-            _jspx_th_sf_errors_2.setCssClass("error");
-            int[] _jspx_push_body_count_sf_errors_2 = new int[] { 0 };
-            try {
-              int _jspx_eval_sf_errors_2 = _jspx_th_sf_errors_2.doStartTag();
-              if (_jspx_th_sf_errors_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-                return;
-              }
-            } catch (Throwable _jspx_exception) {
-              while (_jspx_push_body_count_sf_errors_2[0]-- > 0)
-                out = _jspx_page_context.popBody();
-              _jspx_th_sf_errors_2.doCatch(_jspx_exception);
-            } finally {
-              _jspx_th_sf_errors_2.doFinally();
-              _jspx_tagPool_sf_errors_path_cssClass_nobody.reuse(_jspx_th_sf_errors_2);
-            }
-            out.write("<br>\n");
-            out.write("                    </fieldset>\n");
-            out.write("                    <fieldset>\n");
-            out.write("                        <input type=\"submit\" value=\"Create\" class=\"btn btn-success text-center\">\n");
-            out.write("                    </fieldset>\n");
-            out.write("                </div>\n");
-            out.write("\n");
-            out.write("            ");
-            int evalDoAfterBody = _jspx_th_sf_form_0.doAfterBody();
-            if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-              break;
-          } while (true);
-        }
-        if (_jspx_th_sf_form_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-          return;
-        }
-      } catch (Throwable _jspx_exception) {
-        while (_jspx_push_body_count_sf_form_0[0]-- > 0)
-          out = _jspx_page_context.popBody();
-        _jspx_th_sf_form_0.doCatch(_jspx_exception);
-      } finally {
-        _jspx_th_sf_form_0.doFinally();
-        _jspx_tagPool_sf_form_method_commandName.reuse(_jspx_th_sf_form_0);
-      }
+      out.write("</h3>\n");
+      out.write("            <form method=\"post\" class=\"form-horizontal\">\n");
+      out.write("                <div class=\"col-lg-6 col-lg-offset-3\">\n");
+      out.write("                    <fieldset>\n");
+      out.write("                        <label class=\"text-left control-label\" for=\"firstName\">First Name</label>\n");
+      out.write("                        <input class=\"pull-right form-control input-md\" name=\"firstName\" id=\"firstName\"\n");
+      out.write("                               placeholder=\"Enter first Name\"/>\n");
+      out.write("                        <errors name=\"firstName\" class=\"error\"/>\n");
+      out.write("                        <br>\n");
+      out.write("                    </fieldset>\n");
       out.write("\n");
+      out.write("                    <fieldset>\n");
+      out.write("                        <label class=\"text-left control-label\" for=\"lastName\">Last Name</label>\n");
+      out.write("                        <input class=\"pull-right form-control input-md\" name=\"lastName\" id=\"lastName\"\n");
+      out.write("                               placeholder=\"Enter last Name\"/>\n");
+      out.write("                        <errors name=\"lastName\" class=\"error\"/>\n");
+      out.write("                        <br>\n");
+      out.write("                    </fieldset>\n");
+      out.write("\n");
+      out.write("                    <fieldset>\n");
+      out.write("                        <label class=\"text-left control-label\" for=\"emailAddress\">Email Address</label>\n");
+      out.write("                        <input class=\"pull-right form-control input-md\" name=\"emailAddress\" id=\"emailAddress\"\n");
+      out.write("                               placeholder=\"Enter email address\"/>\n");
+      out.write("                        <errors name=\"emailAddress\" class=\"error\"/>\n");
+      out.write("                        <br>\n");
+      out.write("                    </fieldset>\n");
+      out.write("                    <fieldset>\n");
+      out.write("                        <br>\n");
+      out.write("                        <div class=\"row\">\n");
+      out.write("                            <div class=\"col-lg-6 col-lg-offset-3\">\n");
+      out.write("                                <div class=\"pull-left\">\n");
+      out.write("                                    <input type=\"submit\" value=\"Create\" class=\"btn btn-success \">\n");
+      out.write("                                </div>\n");
+      out.write("                                <div class=\"pull-right\">\n");
+      out.write("                                    &nbsp;<a class=\"btn btn-info\" href=\"");
+      if (_jspx_meth_s_url_1(_jspx_page_context))
+        return;
+      out.write("\">Back</a>\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </fieldset>\n");
+      out.write("                </div>\n");
+      out.write("            </form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("</div>\n");
@@ -275,7 +183,7 @@ public final class createStudent_jsp extends org.apache.jasper.runtime.HttpJspBa
     org.springframework.web.servlet.tags.MessageTag _jspx_th_s_message_0 = (org.springframework.web.servlet.tags.MessageTag) _jspx_tagPool_s_message_code_nobody.get(org.springframework.web.servlet.tags.MessageTag.class);
     _jspx_th_s_message_0.setPageContext(_jspx_page_context);
     _jspx_th_s_message_0.setParent(null);
-    _jspx_th_s_message_0.setCode("create.student");
+    _jspx_th_s_message_0.setCode("create.studentCommand");
     int[] _jspx_push_body_count_s_message_0 = new int[] { 0 };
     try {
       int _jspx_eval_s_message_0 = _jspx_th_s_message_0.doStartTag();
@@ -293,86 +201,28 @@ public final class createStudent_jsp extends org.apache.jasper.runtime.HttpJspBa
     return false;
   }
 
-  private boolean _jspx_meth_sf_input_0(javax.servlet.jsp.tagext.JspTag _jspx_th_sf_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sf_form_0)
+  private boolean _jspx_meth_s_url_1(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  sf:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_sf_input_0 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
-    _jspx_th_sf_input_0.setPageContext(_jspx_page_context);
-    _jspx_th_sf_input_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-    _jspx_th_sf_input_0.setCssClass("pull-right");
-    _jspx_th_sf_input_0.setPath("firstName");
-    _jspx_th_sf_input_0.setDynamicAttribute(null, "placeholder", new String("Enter first Name"));
-    int[] _jspx_push_body_count_sf_input_0 = new int[] { 0 };
+    //  s:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_s_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_s_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_s_url_1.setPageContext(_jspx_page_context);
+    _jspx_th_s_url_1.setParent(null);
+    _jspx_th_s_url_1.setValue("/student/list");
+    int[] _jspx_push_body_count_s_url_1 = new int[] { 0 };
     try {
-      int _jspx_eval_sf_input_0 = _jspx_th_sf_input_0.doStartTag();
-      if (_jspx_th_sf_input_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      int _jspx_eval_s_url_1 = _jspx_th_s_url_1.doStartTag();
+      if (_jspx_th_s_url_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sf_input_0[0]-- > 0)
+      while (_jspx_push_body_count_s_url_1[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_sf_input_0.doCatch(_jspx_exception);
+      _jspx_th_s_url_1.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_sf_input_0.doFinally();
-      _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.reuse(_jspx_th_sf_input_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_sf_input_1(javax.servlet.jsp.tagext.JspTag _jspx_th_sf_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sf_form_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sf:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_sf_input_1 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
-    _jspx_th_sf_input_1.setPageContext(_jspx_page_context);
-    _jspx_th_sf_input_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-    _jspx_th_sf_input_1.setCssClass("pull-right");
-    _jspx_th_sf_input_1.setPath("lastName");
-    _jspx_th_sf_input_1.setDynamicAttribute(null, "placeholder", new String("Enter last Name"));
-    int[] _jspx_push_body_count_sf_input_1 = new int[] { 0 };
-    try {
-      int _jspx_eval_sf_input_1 = _jspx_th_sf_input_1.doStartTag();
-      if (_jspx_th_sf_input_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sf_input_1[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_sf_input_1.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_sf_input_1.doFinally();
-      _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.reuse(_jspx_th_sf_input_1);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_sf_input_2(javax.servlet.jsp.tagext.JspTag _jspx_th_sf_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sf_form_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sf:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_sf_input_2 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
-    _jspx_th_sf_input_2.setPageContext(_jspx_page_context);
-    _jspx_th_sf_input_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sf_form_0);
-    _jspx_th_sf_input_2.setCssClass("pull-right");
-    _jspx_th_sf_input_2.setPath("emailAddress");
-    _jspx_th_sf_input_2.setDynamicAttribute(null, "placeholder", new String("Enter email address"));
-    int[] _jspx_push_body_count_sf_input_2 = new int[] { 0 };
-    try {
-      int _jspx_eval_sf_input_2 = _jspx_th_sf_input_2.doStartTag();
-      if (_jspx_th_sf_input_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sf_input_2[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_sf_input_2.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_sf_input_2.doFinally();
-      _jspx_tagPool_sf_input_placeholder_path_cssClass_nobody.reuse(_jspx_th_sf_input_2);
+      _jspx_th_s_url_1.doFinally();
+      _jspx_tagPool_s_url_value_nobody.reuse(_jspx_th_s_url_1);
     }
     return false;
   }
