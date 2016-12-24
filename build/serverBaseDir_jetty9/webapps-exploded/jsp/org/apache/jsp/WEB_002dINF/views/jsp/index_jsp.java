@@ -67,14 +67,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\">\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write("<h1 class=\"text-center\">Spring MVC + Gradle + Hibernate</h1>\n");
+      out.write("<h1 class=\"text-center\">Welcome to Spring MVC Tutorial</h1>\n");
       out.write("<h3 class=\"text-center\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${title}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h3>\n");
       out.write("<h4 class=\"text-center\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h4>\n");
-      out.write("\n");
       out.write("</body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
